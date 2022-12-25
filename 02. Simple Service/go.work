@@ -1,0 +1,10 @@
+go 1.19
+
+use (
+	.
+	internal/commons/phones
+	internal/controllers
+	internal/models
+	internal/services
+	internal/repositories
+)
