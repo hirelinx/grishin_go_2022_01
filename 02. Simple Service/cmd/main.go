@@ -1,27 +1,29 @@
 package main
 
 import (
+	_ "bufio"
 	"fmt"
-	"models"
+	_ "models"
+	_ "os"
+	"unsafe"
 )
 
 func main() {
+	//disp :=Dis
+	//scanner:=*bufio.Scanner
+	//tokenize :=func(string) []string
+	//outSeparator:=rune
+	//scanner := bufio.NewScanner(os.Stdin)
+	//bufio.SplitFunc()
+	//bufio.ScanLines()
 	errT := func(err error) string {
 		if err != nil {
 			return fmt.Sprintf("Error occurred: %v\n", err)
 		}
 		return "Phone was successfully changed!\n"
 	}
-	igor := models.User{
-		Email:    "igor@gmail.com",
-		Password: "qwerty009",
-		Age:      30,
-		Phone:    "+78005553535",
-	}
-	test := []string{"", "+9872621330", "+88987221330", "988987221330", "+79002281337"}
-	for _, s := range test {
-		err := igor.ChangePhone(s)
-		fmt.Print(errT(err))
-		igor.PrintInformation()
-	}
+	fmt.Printf("Type - %T, value - %v, size - %v \n", errT, errT, unsafe.Sizeof(errT))
+	var errT1 any = errT
+	fmt.Printf("Type - %T, value - %v, size - %v \n", errT1, errT1, unsafe.Sizeof(errT1))
+
 }

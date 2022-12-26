@@ -97,11 +97,11 @@ package phones
 //	return ToSignedString(phon.value)
 //}
 //
-////func (phon *phoneNumber) ToFormattedString(format string, HasNext func() bool, Next func() string) (phone string) {
+////func (phon *phoneNumber) ToFormattedString(format string, HasNext func() bool, Pass func() string) (phone string) {
 ////	return ToFormattedString(phon.value)
 ////}
 ////
-////func ToFormattedString(value int64, format string, Next func() (string, error)) string {
+////func ToFormattedString(value int64, format string, Pass func() (string, error)) string {
 ////
 ////}
 //
